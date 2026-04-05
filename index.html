@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="reset.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="svg-icons dashboard-icon"><svg class="nav-svg dashboard-svg" fill="white" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10 14a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1zm11-5a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V10a1 1 0 0 1 1-1zM10 2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zm11 0a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z" />
+                    </svg>
+                    Dashboard</li>
+
+                <li class="svg-icons"><svg class="nav-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                        fill="white">
+                        <path
+                            d="M12 3s-6.186 5.34-9.643 8.232A1.04 1.04 0 0 0 2 12a1 1 0 0 0 1 1h2v7a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-4h4v4a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-7h2a1 1 0 0 0 1-1 .98.98 0 0 0-.383-.768C18.184 8.34 12 3 12 3" />
+                    </svg>
+                    Home</li>
+
+                <li class="svg-icons"><svg class="nav-svg" fill="white" viewBox="0 0 32 32"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M28 9h-1.958V6.062L22 6l.021 3H9.875l.083-3L6 6.062v3L4 9a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h24a2 2 0 0 0 2-2V11a2 2 0 0 0-2-2m-5-2h2v4h-2zm-13 6.812c1.208 0 2.188 1.287 2.188 2.875s-.98 2.875-2.188 2.875-2.188-1.287-2.188-2.875.98-2.875 2.188-2.875M7 7h2v4H7zM5.667 22.948s.237-1.902.776-2.261 2.09-.598 2.09-.598 1.006 1.075 1.434 1.075 1.433-1.075 1.433-1.075 1.552.238 2.091.598c.633.422.791 2.261.791 2.261zM26 22h-9v-1h9zm0-2h-9v-1h9zm0-2h-9v-1h9zm0-2h-9v-1h9z" />
+                    </svg>
+                    </svg>Profile</li>
+
+                <li class="svg-icons"><svg class="nav-svg" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M20 5.5v13.33a.5.5 0 0 1-.846.362l-5.009-4.789a.5.5 0 0 0-.345-.138H4.5a.5.5 0 0 1-.5-.5V5.5a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 .5.5"/></svg>Messages</li>
+
+                <li class="svg-icons"><svg class="nav-svg" fill="white" viewBox="-16 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M240 432q-48 0-88-23-41-24-64-64-24-41-24-89t24-88q23-41 64-64 40-24 88-24t89 24q40 23 64 64 23 40 23 88t-23 89q-24 40-64 64-41 23-89 23m112-152v-48h-88v-88h-48v136z"/></svg>History</li>
+
+                <li class="svg-icons"><svg class="nav-svg" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 3A2.5 2.5 0 0 0 3 5.5v9A2.5 2.5 0 0 0 5.5 17h9a2.5 2.5 0 0 0 2.5-2.5V9h-4.5A1.5 1.5 0 0 1 11 7.5V3z" fill="white"/><path d="M12 3.144V7.5a.5.5 0 0 0 .5.5h4.356a2.5 2.5 0 0 0-.588-.932l-3.336-3.336A2.5 2.5 0 0 0 12 3.144" fill="white"/></svg>Tasks</li>
+
+                <li class="svg-icons"><svg class="nav-svg" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><path d="M17.75 18c.966 0 1.75.784 1.75 1.75v2.002l-.008.108c-.31 2.127-2.22 3.149-5.425 3.149-3.193 0-5.134-1.01-5.553-3.112L8.5 21.75v-2c0-.966.784-1.75 1.75-1.75zm.494-6h6.006c.966 0 1.75.784 1.75 1.75v2.002l-.008.108c-.31 2.127-2.22 3.149-5.425 3.149l-.168-.002a2.75 2.75 0 0 0-2.47-2.001L17.75 17h-.922a4.5 4.5 0 0 0 1.672-3.5c0-.526-.09-1.03-.256-1.5M3.75 12h6.006c-.166.47-.256.974-.256 1.5 0 1.33.578 2.527 1.496 3.35l.176.15h-.922c-1.262 0-2.326.85-2.65 2.01l-.033-.001c-3.193 0-5.134-1.01-5.553-3.112L2 15.75v-2c0-.966.784-1.75 1.75-1.75M14 10a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7m6.5-6a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7m-13 0a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7" fill="white"/></svg>Communities</li>
+
+                <li class="svg-icons settings-icon"><svg class="nav-svg" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><path fill="white" class="clr-i-solid clr-i-solid-path-1" d="m32.57 15.72-3.35-1a11.7 11.7 0 0 0-.95-2.33l1.64-3.07a.61.61 0 0 0-.11-.72l-2.39-2.4a.61.61 0 0 0-.72-.11l-3.05 1.63a11.6 11.6 0 0 0-2.36-1l-1-3.31a.61.61 0 0 0-.59-.41h-3.38a.61.61 0 0 0-.58.43l-1 3.3a11.6 11.6 0 0 0-2.38 1l-3-1.62a.61.61 0 0 0-.72.11L6.2 8.59a.61.61 0 0 0-.11.72l1.62 3a11.6 11.6 0 0 0-1 2.37l-3.31 1a.61.61 0 0 0-.43.58v3.38a.61.61 0 0 0 .43.58l3.33 1a11.6 11.6 0 0 0 1 2.33l-1.64 3.14a.61.61 0 0 0 .11.72l2.39 2.39a.61.61 0 0 0 .72.11l3.09-1.65a11.7 11.7 0 0 0 2.3.94l1 3.37a.61.61 0 0 0 .58.43h3.38a.61.61 0 0 0 .58-.43l1-3.38a11.6 11.6 0 0 0 2.28-.94l3.11 1.66a.61.61 0 0 0 .72-.11l2.39-2.39a.61.61 0 0 0 .11-.72l-1.66-3.1a11.6 11.6 0 0 0 .95-2.29l3.37-1a.61.61 0 0 0 .43-.58v-3.41a.61.61 0 0 0-.37-.59M18 23.5a5.5 5.5 0 1 1 5.5-5.5 5.5 5.5 0 0 1-5.5 5.5"/><path fill="none" d="M0 0h36v36H0z"/></svg>Settings</li>
+
+                <li class="svg-icons"><svg class="nav-svg" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2m1 17h-2v-2h2zm2.07-7.75-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25"/></svg>Support</li>
+
+                <li class="svg-icons"><svg class="nav-svg" fill="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path  d="M19.42 3.83 12.24 2A.7.7 0 0 0 12 2a.7.7 0 0 0-.2 0L4.58 3.83a2 2 0 0 0-1.51 2.09l.42 5.51a12 12 0 0 0 7.24 10.11l.88.38a.9.9 0 0 0 .7 0l.88-.38a12 12 0 0 0 7.24-10.11l.42-5.51a2 2 0 0 0-1.43-2.09m-3.71 5.88-4 4a1 1 0 0 1-1.42 0l-2-2a1 1 0 0 1 1.42-1.42l1.29 1.3 3.29-3.3a1 1 0 0 1 1.42 1.42"/></svg>Privacy</li>
+            </ul>
+        </nav>
+
+        <div class="right">
+            <header class="header">
+                <section class="search-notif">
+                    <div class="search-container">
+                        <label for="search-in"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="search">
+                                <path
+                                    d="m20.71 19.29-3.4-3.39A7.92 7.92 0 0 0 19 11a8 8 0 1 0-8 8 7.92 7.92 0 0 0 4.9-1.69l3.39 3.4a1 1 0 0 0 1.42 0 1 1 0 0 0 0-1.42zM5 11a6 6 0 1 1 6 6 6 6 0 0 1-6-6z">
+                                </path>
+                            </svg></label>
+                        <input type="text" id="search-in">
+                    </div>
+
+                    <div class="notif-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                            <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                            <path d="M4 2C2.8 3.7 2 5.7 2 8" />
+                            <path d="M22 8c0-2.3-.8-4.3-2-6" />
+                        </svg>
+                        <div class="user-handle">
+                            <img class="user-pic" src="./assets/luffy.jpg" alt="user image">
+                            <p><strong>Pyara Billa</strong></p>
+                        </div>
+                    </div>
+
+                </section>
+
+                <section class="user-option">
+                    <div class="user">
+                        <img class="user-img" src="./assets/luffy.jpg" alt="user image">
+                        <div class="user-greeting">
+                            <p class="hi"><strong>Hi there,</strong></p>
+                            <p><strong>Pyara Billa (@Pyara)</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="option">
+                        <button class="option-btn">New</button>
+                        <button class="option-btn">Upload</button>
+                        <button class="option-btn">Share</button>
+                    </div>
+                </section>
+            </header>
+
+            <main class="main">
+                <section class="projects">
+                    <div class="projects-container">
+                        <strong>Your Projects</strong>
+                        <div class="project-cards">
+                            <article class="project-card">
+                                <div class="project-info">
+                                    <p><strong>Super Cool Project</strong></p>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi obcaecati animi
+                                        vel
+                                        laboriosam? Porro, sit. Consectetur, expedita?
+                                    </p>
+                                </div>
+                                <div class="icons">
+                                    <svg class="icon-svg" fill="#000000" viewBox="0 0 24 24" id="star"
+                                        data-name="Line Color" xmlns="http://www.w3.org/2000/svg"
+                                        class="icon line-color">
+                                        <polygon id="primary"
+                                            points="12 4 9.22 9.27 3 10.11 7.5 14.21 6.44 20 12 17.27 17.56 20 16.5 14.21 21 10.11 14.78 9.27 12 4"
+                                            style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+                                        </polygon>
+                                    </svg>
+                                    <svg class="icon-svg" fill="#000000" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.92,11.6C19.9,6.91,16.1,4,12,4S4.1,6.91,2.08,11.6a1,1,0,0,0,0,.8C4.1,17.09,7.9,20,12,20s7.9-2.91,9.92-7.6A1,1,0,0,0,21.92,11.6ZM12,18c-3.17,0-6.17-2.29-7.9-6C5.83,8.29,8.83,6,12,6s6.17,2.29,7.9,6C18.17,15.71,15.17,18,12,18ZM12,8a4,4,0,1,0,4,4A4,4,0,0,0,12,8Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,14Z" />
+                                    </svg>
+                                    <svg class="icon-svg" fill="#000000" viewBox="-4 -2 24 24"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin"
+                                        class="jam jam-merge">
+                                        <path
+                                            d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z' />
+                                    </svg>
+                                </div>
+                            </article>
+
+                            <article class="project-card">
+                                <div class="project-info">
+                                    <p><strong>Less Cool Project</strong></p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic at cum facilis
+                                        blanditiis
+                                        illum
+                                        in
+                                        modi
+                                        explicabo nemo quam rem.</p>
+                                </div>
+                                <div class="icons">
+                                    <svg class="icon-svg" fill="#000000" viewBox="0 0 24 24" id="star"
+                                        data-name="Line Color" xmlns="http://www.w3.org/2000/svg"
+                                        class="icon line-color">
+                                        <polygon id="primary"
+                                            points="12 4 9.22 9.27 3 10.11 7.5 14.21 6.44 20 12 17.27 17.56 20 16.5 14.21 21 10.11 14.78 9.27 12 4"
+                                            style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+                                        </polygon>
+                                    </svg>
+                                    <svg class="icon-svg" fill="#000000" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.92,11.6C19.9,6.91,16.1,4,12,4S4.1,6.91,2.08,11.6a1,1,0,0,0,0,.8C4.1,17.09,7.9,20,12,20s7.9-2.91,9.92-7.6A1,1,0,0,0,21.92,11.6ZM12,18c-3.17,0-6.17-2.29-7.9-6C5.83,8.29,8.83,6,12,6s6.17,2.29,7.9,6C18.17,15.71,15.17,18,12,18ZM12,8a4,4,0,1,0,4,4A4,4,0,0,0,12,8Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,14Z" />
+                                    </svg>
+                                    <svg class="icon-svg" fill="#000000" viewBox="-4 -2 24 24"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin"
+                                        class="jam jam-merge">
+                                        <path
+                                            d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z' />
+                                    </svg>
+                                </div>
+                            </article>
+
+                            <article class="project-card">
+                                <div class="project-info">
+                                    <p><strong>Impossible App</strong></p>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam sed facere at
+                                        porro
+                                        libero
+                                        omnis!
+                                    </p>
+                                </div>
+                                <div class="icons">
+                                    <svg class="icon-svg" fill="#000000" viewBox="0 0 24 24" id="star"
+                                        data-name="Line Color" xmlns="http://www.w3.org/2000/svg"
+                                        class="icon line-color">
+                                        <polygon id="primary"
+                                            points="12 4 9.22 9.27 3 10.11 7.5 14.21 6.44 20 12 17.27 17.56 20 16.5 14.21 21 10.11 14.78 9.27 12 4"
+                                            style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+                                        </polygon>
+                                    </svg>
+                                    <svg class="icon-svg" fill="#000000" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.92,11.6C19.9,6.91,16.1,4,12,4S4.1,6.91,2.08,11.6a1,1,0,0,0,0,.8C4.1,17.09,7.9,20,12,20s7.9-2.91,9.92-7.6A1,1,0,0,0,21.92,11.6ZM12,18c-3.17,0-6.17-2.29-7.9-6C5.83,8.29,8.83,6,12,6s6.17,2.29,7.9,6C18.17,15.71,15.17,18,12,18ZM12,8a4,4,0,1,0,4,4A4,4,0,0,0,12,8Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,14Z" />
+                                    </svg>
+                                    <svg class="icon-svg" fill="#000000" viewBox="-4 -2 24 24"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin"
+                                        class="jam jam-merge">
+                                        <path
+                                            d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z' />
+                                    </svg>
+                                </div>
+                            </article>
+
+                            <article class="project-card">
+                                <div class="project-info">
+                                    <p><strong>Easy Peasy App</strong></p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iste accusantium
+                                        eum
+                                        sapiente tempore ea soluta impedit!</p>
+                                </div>
+                                <div class="icons">
+                                    <svg class="icon-svg" fill="#000000" viewBox="0 0 24 24" id="star"
+                                        data-name="Line Color" xmlns="http://www.w3.org/2000/svg"
+                                        class="icon line-color">
+                                        <polygon id="primary"
+                                            points="12 4 9.22 9.27 3 10.11 7.5 14.21 6.44 20 12 17.27 17.56 20 16.5 14.21 21 10.11 14.78 9.27 12 4"
+                                            style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+                                        </polygon>
+                                    </svg>
+                                    <svg class="icon-svg" fill="#000000" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.92,11.6C19.9,6.91,16.1,4,12,4S4.1,6.91,2.08,11.6a1,1,0,0,0,0,.8C4.1,17.09,7.9,20,12,20s7.9-2.91,9.92-7.6A1,1,0,0,0,21.92,11.6ZM12,18c-3.17,0-6.17-2.29-7.9-6C5.83,8.29,8.83,6,12,6s6.17,2.29,7.9,6C18.17,15.71,15.17,18,12,18ZM12,8a4,4,0,1,0,4,4A4,4,0,0,0,12,8Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,14Z" />
+                                    </svg>
+                                    <svg class="icon-svg" fill="#000000" viewBox="-4 -2 24 24"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin"
+                                        class="jam jam-merge">
+                                        <path
+                                            d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z' />
+                                    </svg>
+                                </div>
+                            </article>
+
+                            <article class="project-card">
+                                <div class="project-info">
+                                    <p><strong>Ad Blocker</strong></p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis architecto nisi
+                                        quis
+                                        enim, voluptatum consequuntur itaque recusandae.</p>
+                                </div>
+                                <div class="icons">
+                                    <svg class="icon-svg" fill="#000000" viewBox="0 0 24 24" id="star"
+                                        data-name="Line Color" xmlns="http://www.w3.org/2000/svg"
+                                        class="icon line-color">
+                                        <polygon id="primary"
+                                            points="12 4 9.22 9.27 3 10.11 7.5 14.21 6.44 20 12 17.27 17.56 20 16.5 14.21 21 10.11 14.78 9.27 12 4"
+                                            style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+                                        </polygon>
+                                    </svg>
+                                    <svg class="icon-svg" fill="#000000" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.92,11.6C19.9,6.91,16.1,4,12,4S4.1,6.91,2.08,11.6a1,1,0,0,0,0,.8C4.1,17.09,7.9,20,12,20s7.9-2.91,9.92-7.6A1,1,0,0,0,21.92,11.6ZM12,18c-3.17,0-6.17-2.29-7.9-6C5.83,8.29,8.83,6,12,6s6.17,2.29,7.9,6C18.17,15.71,15.17,18,12,18ZM12,8a4,4,0,1,0,4,4A4,4,0,0,0,12,8Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,14Z" />
+                                    </svg>
+                                    <svg class="icon-svg" fill="#000000" viewBox="-4 -2 24 24"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin"
+                                        class="jam jam-merge">
+                                        <path
+                                            d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z' />
+                                    </svg>
+                                </div>
+                            </article>
+
+                            <article class="project-card">
+                                <div class="project-info">
+                                    <p><strong>Money Maker</strong></p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eum unde dolore
+                                        praesentium exercitationem sed commodi atque?</p>
+                                </div>
+                                <div class="icons">
+                                    <svg class="icon-svg" fill="#000000" viewBox="0 0 24 24" id="star"
+                                        data-name="Line Color" xmlns="http://www.w3.org/2000/svg"
+                                        class="icon line-color">
+                                        <polygon id="primary"
+                                            points="12 4 9.22 9.27 3 10.11 7.5 14.21 6.44 20 12 17.27 17.56 20 16.5 14.21 21 10.11 14.78 9.27 12 4"
+                                            style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;">
+                                        </polygon>
+                                    </svg>
+                                    <svg class="icon-svg" fill="#000000" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.92,11.6C19.9,6.91,16.1,4,12,4S4.1,6.91,2.08,11.6a1,1,0,0,0,0,.8C4.1,17.09,7.9,20,12,20s7.9-2.91,9.92-7.6A1,1,0,0,0,21.92,11.6ZM12,18c-3.17,0-6.17-2.29-7.9-6C5.83,8.29,8.83,6,12,6s6.17,2.29,7.9,6C18.17,15.71,15.17,18,12,18ZM12,8a4,4,0,1,0,4,4A4,4,0,0,0,12,8Zm0,6a2,2,0,1,1,2-2A2,2,0,0,1,12,14Z" />
+                                    </svg>
+                                    <svg class="icon-svg" fill="#000000" viewBox="-4 -2 24 24"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin"
+                                        class="jam jam-merge">
+                                        <path
+                                            d='M8 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zM7 5.83a3.001 3.001 0 1 1 2.033-.013v2.028c0 .074-.003.148-.008.221a1 1 0 0 0 .462.637l3.086 1.846a3 3 0 0 1 1.46 2.575v1.059a3.001 3.001 0 1 1-2-.024v-1.035a1 1 0 0 0-.487-.858L8.46 10.42a3 3 0 0 1-.444-.324 3 3 0 0 1-.443.324l-3.086 1.846a1 1 0 0 0-.487.858v1.047a3.001 3.001 0 1 1-2 0v-1.047a3 3 0 0 1 1.46-2.575l3.086-1.846a1 1 0 0 0 .462-.637A3.006 3.006 0 0 1 7 7.845V5.829zM3 18a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm10 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z' />
+                                    </svg>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="announcement-trending-container">
+                    <aside class="announcement-trending">
+                        <section class="announcement">
+                            <strong>Announcements</strong>
+                            <div class="announcement-container">
+                                <article class="announcement-card">
+                                    <strong>Site Maintenance</strong>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus molestias
+                                        architecto
+                                        distinctio.</p>
+                                </article>
+
+                                <article class="announcement-card">
+                                    <strong>Community Share Day</strong>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus molestias
+                                        architecto
+                                        distinctio.</p>
+                                </article>
+
+                                <article class="announcement-card">
+                                    <strong>Updated Privacy Policy</strong>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus molestias
+                                        architecto
+                                        distinctio.</p>
+                                </article>
+                            </div>
+                        </section>
+
+                        <section class="trending">
+                            <strong>Trending</strong>
+                            <div class="trending-container">
+                                <div class="other-user-info">
+                                    <article class="other-user">
+                                        <img class="other-icon" src="./assets/zoro.jpg" alt="Zoro icon">
+                                        <div class="other-user-info">
+                                            <strong>@zoro</strong>
+                                            <p>World Peace Builder</p>
+                                        </div>
+                                    </article>
+                                    <article class="other-user">
+                                        <img class="other-icon" src="./assets/nami.jpg" alt="Nami icon">
+                                        <div class="other-user-info">
+                                            <strong>@nami</strong>
+                                            <p>Super Cool Project</p>
+                                        </div>
+                                    </article>
+                                    <article class="other-user">
+                                        <img class="other-icon" src="./assets/sanji.jpg" alt="Sanji icon">
+                                        <div class="other-user-info">
+                                            <strong>@sanji</strong>
+                                            <p>Life Changing App</p>
+                                        </div>
+                                    </article>
+                                    <article class="other-user">
+                                        <img class="other-icon" src="./assets/robin.jpg" alt="robin icon">
+                                        <div class="other-user-info">
+                                            <strong>@robin</strong>
+                                            <p>No Traffic Maker</p>
+                                        </div>
+                                    </article>
+                                </div>
+                        </section>
+                    </aside>
+                </div>
+            </main>
+        </div </div>
+</body>
+
+</html>
